@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomodoCafe", "KomodoCafe\KomodoCafe.csproj", "{304443A0-6C72-44EA-B116-28283240BDED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuRepositoryTests", "MenuRepositoryTests\MenuRepositoryTests.csproj", "{ED146F0F-5AA4-4B27-A9AB-72E02290B869}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{304443A0-6C72-44EA-B116-28283240BDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304443A0-6C72-44EA-B116-28283240BDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304443A0-6C72-44EA-B116-28283240BDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304443A0-6C72-44EA-B116-28283240BDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED146F0F-5AA4-4B27-A9AB-72E02290B869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED146F0F-5AA4-4B27-A9AB-72E02290B869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED146F0F-5AA4-4B27-A9AB-72E02290B869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED146F0F-5AA4-4B27-A9AB-72E02290B869}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6FB368E5-9167-4306-94F5-6FBAEBE7CCA6}
+	EndGlobalSection
+EndGlobal
