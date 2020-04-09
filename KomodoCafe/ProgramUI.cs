@@ -32,10 +32,7 @@ namespace KomodoCafe
                     switch (input)
                     {
                         case 1:
-                            for (int i = 0; i < itemsOnMenu.Count; i++)
-                            {
-                                Console.WriteLine("Meal Number: {itemsOnMenu[i]}, Meal Name: {itemsOnMenu[i]}, Meal Description: {itemsOnMenu[i]}, Menu Ingredents: {itemsOnMenu[i]}, Price: {itemsOnMenu[i]}");
-                            }
+                            menu.PrintMenu(itemsOnMenu);
                             break;
                         case 2:
                             menu = userInputHelper.GetItemFromUser();
