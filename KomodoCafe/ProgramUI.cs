@@ -13,7 +13,7 @@ namespace KomodoCafe
             UserInputHelper userInputHelper = new UserInputHelper();
             Menu menu = new Menu();
             MenuRepository repo = new MenuRepository();
-            List<Menu> itemsOnMenu = repo.GetAllItemsOnMenu();
+            // List<Menu> itemsOnMenu = repo.GetAllItemsOnMenu();
 
             bool running = true;
 
@@ -23,8 +23,8 @@ namespace KomodoCafe
                     "1: Look at all the menu items\n" +
                     "2: Add a menu item\n" +
                     "3: Delete a menu item\n" +
-                    "4: Place an order\n" +
-                    "5: Press Q to exit");
+                    // TODO: "4: Place an order\n"
+                    "4: Press Q to exit");
 
                 try
                 {
@@ -32,6 +32,7 @@ namespace KomodoCafe
                     switch (input)
                     {
                         case 1:
+                            List<Menu> itemsOnMenu = repo.GetAllItemsOnMenu();
                             menu.PrintMenu(itemsOnMenu);
                             break;
                         case 2:
