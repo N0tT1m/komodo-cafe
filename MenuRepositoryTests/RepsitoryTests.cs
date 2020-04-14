@@ -38,5 +38,16 @@ namespace MenuRepositoryTests
             bool wasRemoved = repo.DeleteItemFromMenu(menu.MealNumber);
             Assert.IsTrue(wasRemoved);
         }
+
+        [TestMethod]
+        public void GetAllMenuItems_ShouldReturnList()
+        {
+            List<Menu> menuItems = repo.GetAllItemsOnMenu();
+
+            List<Menu> menu1 = repo.GetAllItemsOnMenu();
+            List<Menu> menu2 = menuItems;
+
+            Assert.AreEqual(menu1, menu2);
+        }
     }
 }
