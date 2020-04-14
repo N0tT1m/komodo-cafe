@@ -8,12 +8,12 @@ namespace KomodoCafe
 {
     class UserInputHelper
     {
-        public Menu GetItemFromUser()
+        public Menu GetItemFromUser(Menu menu)
         {
+            menu.Ingredients = new List<string>();
+
             int count = 0;
-            List<string> ingredents = new List<string>();
             bool enteringIngredents = true;
-            Menu menu = new Menu();
             Console.WriteLine("Please enter a number for your meal: ");
             menu.MealNumber = int.Parse(Console.ReadLine());
             Console.WriteLine("Please enter a name for your meal: ");
@@ -25,7 +25,7 @@ namespace KomodoCafe
                 if (count == 0)
                 {
                     Console.WriteLine("Please enter your ingredents: ");
-                    ingredents.Add(Console.ReadLine());
+                    menu.Ingredients.Add(Console.ReadLine());
                 }
                 else
                 {
@@ -37,7 +37,7 @@ namespace KomodoCafe
                     }
                     else
                     {
-                        ingredents.Add(input);
+                        menu.Ingredients.Add(input);
                     }
                 }
                 count++;
@@ -47,5 +47,12 @@ namespace KomodoCafe
 
             return menu;
         }
+
+        //public int GetMealNumberToDelete()
+        //{
+        //    Console.WriteLine("What meal would you like to delete?");
+        //    int mealNumber = int.Parse(Console.ReadLine());
+        //    return mealNumber;
+        //}
     }
 }

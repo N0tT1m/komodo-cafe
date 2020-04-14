@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KomodoCafe
 {
-    class MenuRepository : IMenuRepository
+    public class MenuRepository : IMenuRepository
     {
         private List<Menu> _menu = new List<Menu>()
         {
@@ -27,8 +27,9 @@ namespace KomodoCafe
             }
         };
 
-        public void AddItemToMenu(Menu itemToAdd)
+        public bool AddItemToMenu(Menu itemToAdd)
         {
+            int startingCount = _menu.Count;
             try
             {
                 _menu.Add(itemToAdd);
@@ -37,18 +38,30 @@ namespace KomodoCafe
             {
                 Console.WriteLine("Item could not be added to menu");
             }
+            bool wasAdded = (_menu.Count > startingCount);
+            return wasAdded;
         }
 
-        public void DeleteItemFromMenu(Menu itemToDelete)
+        public bool DeleteItemFromMenu(int itemToDelete)
         {
+            int startingCount = _menu.Count;
             try
             {
-                _menu.Add(itemToDelete);
+                foreach (Menu item in _menu)
+                {
+                    if (item.MealNumber == itemToDelete)
+                    {
+                        int index = _menu.IndexOf(item);
+                        _menu.RemoveAt(index);
+                    }
+                }
             }
-            catch (Exception)
+            catch (InvalidOperationException)
             {
-                Console.WriteLine("Item could not be deleted from menu");
+                Console.WriteLine("Item deleted");
             }
+            bool wasRemoved = (_menu.Count < startingCount);
+            return wasRemoved;
         }
 
         public List<Menu> GetAllItemsOnMenu()

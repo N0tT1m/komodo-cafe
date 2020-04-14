@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KomodoCafe
 {
-    class Menu
+    public class Menu
     {
         public Menu()
         {
@@ -29,7 +29,7 @@ namespace KomodoCafe
                 {
                     System.Console.WriteLine("\t" + ingredient);
                 }
-                Console.WriteLine($"Price:\n\t{items[i].Price}"); 
+                Console.WriteLine($"Price:\n\t{items[i].Price}\n"); 
             }
         }
     }

@@ -36,19 +36,25 @@ namespace KomodoCafe
                             menu.PrintMenu(itemsOnMenu);
                             break;
                         case 2:
-                            menu = userInputHelper.GetItemFromUser();
+                            menu = userInputHelper.GetItemFromUser(menu);
                             repo.AddItemToMenu(menu);
                             break;
                         case 3:
+                            List<Menu> menuItems = repo.GetAllItemsOnMenu();
+                            for (int i = 0; i < menuItems.Count - 1; i++)
+                            {
+                                Console.WriteLine($"{menu.MealNumber.ToString()[i]} {menu.MealName[i]}");
+                            }
+                            int mealToDelete = int.Parse(Console.ReadLine());
+                            repo.DeleteItemFromMenu(mealToDelete);
                             break;
                         case 4:
-                            break;
-                        case 5:
                             Console.WriteLine("BYEEE");
                             running = false;
-                            break;
-
+                            break;                            
                     }
+                    Console.ReadLine();
+                    Console.Clear();
 
                 }
                 catch (FormatException)
